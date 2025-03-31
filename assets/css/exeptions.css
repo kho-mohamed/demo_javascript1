@@ -1,0 +1,11 @@
+.invisible {
+  display: none;
+}
+
+.inactif {
+  background-color:rgb(152, 150, 150);
+  pointer-events: none;
+}
+.agrandi{
+  transform: scale(1.5);
+}

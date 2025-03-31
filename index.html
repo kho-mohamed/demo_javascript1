@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script type="module" src="assets/js/accueil.js"></script>
+    <title>Accueil TP1</title>
+  </head>
+  <body data-theme="clair">
+    <header>
+      <nav id="nav-principale"></nav>
+      <input type="button" value="Mode Sombre" data-mode="sombre" />
+      <input type="button" value="Mode Clair" data-mode="clair" />
+    </header>
+    <main>
+      <aside class="aside_detail">
+        <div class="detail">
+          <img class="detail__img" src="" alt="" />
+          <h2>Nom</h2>
+          <p class="detail__nom">Nom</p>
+          <h3>Description</h3>
+          <p class="detail__description">Description</p>
+        </div>
+      </aside>
+      <section>
+        <div class="section-header">
+          <h1>Liste des produits</h1>
+          <div class="filtres">
+            <div class="bouton tri" id="tri-alpha-croissant">
+              Par ordre alphabétique (A-Z)
+            </div>
+            <div class="bouton tri" id="tri-alpha-decroissant">
+              Par ordre alphabétique (Z-A)
+            </div>
+            <div class="bouton tri" id="tri-prix-croissant">
+              Par ordre de prix croissant
+            </div>
+            <div class="bouton tri" id="tri-prix-decroissant">
+              Par ordre prix décroissant
+            </div>
+          </div>
+        </div>
+        <div class="grille-produits"></div>
+      </section>
+    </main>
+  </body>
+</html>

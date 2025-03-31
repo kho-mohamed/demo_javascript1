@@ -1,0 +1,42 @@
+.galerie {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+
+.galerie .btn-nav-galerie {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 60%;
+}
+.galerie .btn-galerie {
+  margin-top: 20px;
+  background-color: var(--couleur-element);
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  &:hover {
+    scale: 1.05;
+    transition: scale 500ms;
+  }
+}
+.galerie .btn-galerie span {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: white;
+}
+.galerie picture {
+  cursor: pointer;
+  border: thick double var(--couleur-element);
+  border-radius: 10px;
+  margin-top: 20px;
+  max-width: 80%;
+}
+.galerie img {
+  max-width: 100%;
+}

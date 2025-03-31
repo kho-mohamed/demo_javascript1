@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travail pratique 2</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script type="module" src="assets/js/formulaire.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="nav-principale"></nav>
+    </header>
+    <main class="main_formulaire">
+      <h1 class="titre_formulaire">Validation d'achat</h1>
+      <form action="" method="GET">
+        <section data-page="0" class="infos-client">
+          <div class="titre_section">
+            <h2>Etape 1- Informations personnelles</h2>
+          </div>
+          <div class="block_info">
+            <div class="ensemble_input">
+              <div>
+                <label class="label" for="nom">Nom Complet * Obligatoire</label>
+                <input
+                  type="text"
+                  name="nom"
+                  id="nom"
+                  minlength="4"
+                  maxlength="50"
+                  required
+                />
+                <p class="message-erreur">Veuillez corriger le nom saisie.</p>
+              </div>
+              <div>
+                <label class="label" for="courriel"
+                  >Courriel *obligatoire</label
+                >
+                <input type="email" name="courriel" id="courriel" required />
+                <p class="message-erreur">
+                  Veuillez corriger le courriel saisie.
+                </p>
+              </div>
+              <div>
+                <label class="label" for="telephone"
+                  >Numéro de téléphone *obligatoire</label
+                >
+                <input
+                  type="tel"
+                  name="telephone"
+                  id="telephone"
+                  required
+                  pattern="\(?(\d{3})\)?\s?-?(\d{3})-?(\d{4})"
+                  required
+                />
+                <p class="message-erreur">
+                  Veuillez corriger la téléphone saisie.
+                </p>
+              </div>
+            </div>
+            <div class="ensemble_input">
+              <div>
+                <label class="label" for="adresse">Adresse *obligatoire</label>
+                <input
+                  type="text"
+                  name="adresse"
+                  id="adresse"
+                  minlength="5"
+                  maxlength="100"
+                  required
+                />
+                <p class="message-erreur">
+                  Veuillez corriger l'addresse saisie.
+                </p>
+              </div>
+
+              <div>
+                <label class="label" for="ville">Ville *obligatoire</label>
+                <input
+                  type="text"
+                  name="ville"
+                  id="ville"
+                  minlength="3"
+                  maxlength="20"
+                  required
+                />
+                <p class="message-erreur">Veuillez corriger la ville saisie.</p>
+              </div>
+              <div>
+                <label class="label" for="codepostal"
+                  >Code Postal *obligatoire</label
+                >
+                <input
+                  type="text"
+                  name="codepostal"
+                  id="codepostal"
+                  pattern="([a-zA-Z]\d[a-zA-z])\s?(\d[a-zA-Z]\d)"
+                  required
+                />
+                <p class="message-erreur">
+                  Veuillez corriger le code postal saisie.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-page="1" class="infos-livraison">
+          <div class="titre_section">
+            <h2>Etape 2-Informations sur la livraison</h2>
+          </div>
+          <div>
+            <label class="label" for="date_livraison"
+              >Date idéal de livraison *obligatoire</label
+            >
+            <input
+              type="date"
+              name="date_livraison"
+              id="date_livraison"
+              required
+            />
+          </div>
+          <div class="block_input">
+            <label class="label" for="livraison_magasin"
+              >Livraison en magasin</label
+            >
+            <div class="checkbox_magasin">
+              <input
+                type="checkbox"
+                name="livraison_en_magasin"
+                id="livraison_magasin"
+              />
+              <select name="magasin" id="magasin" disabled>
+                <option value="quebec">Sucursale de Québec</option>
+                <option value="montreal">Agence de Montréal</option>
+                <option value="ontario">Agence de l'Ontario</option>
+              </select>
+            </div>
+            <div class="choix_livraison">
+              <h3 class="service_livraison">Service de livraison</h3>
+              <div class="option_livraison">
+                <label for="Poste_Canada">Poste Canada</label>
+                <input
+                  type="radio"
+                  name="choix_livraison"
+                  id="Poste_Canada"
+                  value="Poste_Canada"
+                />
+                <label for="fedex">fedex</label>
+                <input
+                  type="radio"
+                  name="choix_livraison"
+                  id="fedex"
+                  value="fedex"
+                />
+                <label for="ups">UPS</label>
+                <input
+                  type="radio"
+                  name="choix_livraison"
+                  id="ups"
+                  value="ups"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section data-page="2" class="resume_fiche">
+          <h2 class="titre_resume">Etat 3- Résumé</h2>
+          <div>
+            <h3>Informations personnelles:</h3>
+            <p data-champ="nom"></p>
+            <p data-champ="courriel"></p>
+            <p date-champ="telephone"></p>
+          </div>
+          <div>
+            <h3>Adresse:</h3>
+            <p data-champ="adresse"></p>
+            <p data-champ="ville"></p>
+            <p date-champ="codePostal"></p>
+          </div>
+          <div>
+            <h3>Livraison:</h3>
+            <h4>Date de livraison:</h4>
+            <p data-champ="date_livraison"></p>
+            <h4>Livraison en magasin:</h4>
+            <p data-champ="livraison_en_magasin"></p>
+            <h4>Le magasin Choisie ou Adresse de livraison:</h4>
+            <p data-champ="magasin"></p>
+            <p date-champ="choix_livraison"></p>
+          </div>
+        </section>
+        <div class="boutton_de_validation">
+          <div class="bouton" data-direction="-1">Retour</div>
+          <div class="bouton" data-direction="1">Continuer</div>
+          <input class="bouton" type="submit" value="Confirmer la commande" />
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

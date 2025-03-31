@@ -1,0 +1,27 @@
+.contact {
+  flex-flow: column;
+}
+.contact > article {
+  margin: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+.contact > article > * + * {
+  margin: 20px;
+}
+.contact > article > * {
+  width: 80%;
+}
+.contact h2,
+.contact p {
+  text-align: center;
+}
+.contact img {
+  border-radius: 10px;
+}
+.contact span {
+  display: block;
+}

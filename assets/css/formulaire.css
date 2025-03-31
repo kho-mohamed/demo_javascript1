@@ -1,0 +1,132 @@
+.main_formulaire {
+  display: flex;
+  flex-direction: column;
+  margin: 70px auto;
+}
+
+.main_formulaire >  form {
+  background-color: rgb(233, 226, 207);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  width: 700px;
+  min-height: 400px;
+}
+.titre_section,
+.titre_resume {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.block_info {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.infos-client > div > label,
+.infos-livraison > div,
+.service_livraison,
+.label {
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+section label {
+  display: flex;
+  flex-direction: column;
+}
+.infos-client div > input {
+  width: 250px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+[id="date_livraison"],
+[id="magasin"] {
+  height: 30px;
+  width: 200px;
+}
+.checkbox_magasin {
+  display: flex;
+  gap: 20px;
+}
+input[type="checkbox"] {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #ffff00;
+  border-color: #ffff00;
+}
+[id="magasin"] {
+  border: none;
+}
+.option_livraison {
+  display: flex;
+  padding-left: 20px;
+}
+.option_livraison > label {
+  margin-left: 25px;
+  margin-right: 10px;
+}
+[type="radio"] {
+  border: none;
+  scale: 1.7;
+}
+
+.boutton_de_validation {
+  margin-top: 10px;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resume_fiche {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.titre_formulaire {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 40px;
+}
+.bouton {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  background-color: tomato;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 350ms;
+}
+
+.bouton:hover {
+  background-color: color-mix(in oklab, tomato, black 10%);
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+form .message-erreur {
+  display: none;
+}
+form .erreur {
+  border: 4px red dashed !important;
+}
+form .erreur ~ .message-erreur {
+  display: block;
+}
+form [name]:invalid {
+  border: 4px rgb(188, 97, 97) dashed !important;
+}

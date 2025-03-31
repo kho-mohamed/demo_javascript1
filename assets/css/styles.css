@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("./reset.css");
+@import url("/assets/css/variables.css");
+@import url("./formulaire.css");
+@import url("./galerie.css");
+@import url("./contact.css");
+@import url("./exeptions.css");
+@import url("./boiteAnnonce.css");
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+body {
+  position: relative;
+  background-color: var(--couleur-bg);
+  color: var(--couleur-police-principal);
+}
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: all 350ms;
+}
+a:hover {
+  color: var(--couleur-element);
+  text-decoration: underline;
+}
+a.actif {
+  color: var(--couleur-element);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ENTETE */
+header {
+  padding: 2rem;
+  background-color: var(--couleur-navigation);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  gap: 3rem;
+}
+
+nav .logo {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+nav .nav__liste {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+@keyframes zigzag {
+  10% {
+    transform: rotate(5deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  40% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+header > input {
+  border: none;
+  border-radius: 10px;
+  background-color: var(--couleur-boite);
+  width: 100px;
+  height: 40px;
+  color: var(--couleur-bg);
+  font-weight: 600;
+  cursor: pointer;
+  &:hover {
+    animation: zigzag 5s ease-in-out;
+  }
+}
+/* Page principale */
+main {
+  display: flex;
+  flex-grow: 2;
+}
+
+main > aside {
+  flex-basis: 40%;
+  padding: 3rem;
+}
+
+main > section {
+  flex-basis: 60%;
+  padding: 3rem;
+  flex-grow: 1;
+}
+
+/* section produit*/
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  & h2,
+  h3 {
+    text-decoration: underline;
+  }
+  & p {
+    font-size: 1.2em;
+  }
+}
+
+.detail .detail__img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grille-produits {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.grille-produits .produit {
+  flex-basis: calc(30% - 2rem);
+  cursor: pointer;
+  transition: all 350ms;
+  padding: 10px;
+}
+
+.grille-produits .produit:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.grille-produits .produit .produit__img {
+  max-width: 100%;
+}
+.buy-button {
+  background-color: var(--couleur-boutton-action);
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.section-header .filtres {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_apropos {
+  flex-flow: column;
+  & h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
