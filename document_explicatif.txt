@@ -1,0 +1,21 @@
+Documentation du code
+
+	•	Boîte modale d’accueil
+J’ai choisi d’afficher une boîte modale sur la page d’accueil comme réaction à la première visite de l’utilisateur. Pour appliquer le principe de la propagation des événements, j’ai ajouté un écouteur sur l’ensemble de la boîte, et j’ai récupéré le bouton de fermeture grâce à la propriété evenement.target.
+
+	•	Carrousel d’images sur la page “À propos”
+Le carrousel d’images a été intégré comme demandé, avec un défilement automatique qui s’interrompt et se relance soit via un clic sur les boutons de navigation, soit par un clic sur l’image, qui s’agrandit ou se rétracte au clic.
+
+	•	Animations
+Plusieurs animations ont été ajoutées au projet :
+	•	Animation sur la boîte d’annonce à l’accueil au survol (hover).
+	•	Animation progressive des éléments de la grille de produits à l’accueil, avec un délai basé sur l’index de chaque produit.
+	•	Animation sur les boutons du mode sombre et du mode clair.
+	•	Animation par opacité dans la galerie d’images.
+	•	Utilisation de la classe scrollAnimation dans la section contact pour afficher progressivement le contenu lors du défilement.
+
+	•	Mode sombre et mode clair
+Le changement de thème (sombre/clair) est géré à l’aide d’un élément <input> dans le header. L’état actif est détecté et affiché dynamiquement, et chaque interaction est enregistrée dans le localStorage.
+
+	•	Modularisation du JavaScript
+J’ai structuré le JavaScript en modules, en important uniquement les éléments nécessaires dans les pages concernées. Chaque fonction exportée est documentée à l’aide de JSDoc pour améliorer la lisibilité et la maintenance du code.
