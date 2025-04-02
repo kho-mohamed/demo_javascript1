@@ -1,9 +1,9 @@
+@import url("variables.css");
 .galerie {
   display: flex;
   flex-flow: column;
   align-items: center;
 }
-
 
 .galerie .btn-nav-galerie {
   display: flex;

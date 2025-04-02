@@ -1,3 +1,4 @@
+@import url("variables.css");
 @keyframes animationBoite {
   0% {
     border: 2px solide transparent;
