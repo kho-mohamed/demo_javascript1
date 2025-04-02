@@ -52,7 +52,7 @@ const listeproduits = [
   },
   {
     id: 9,
-    nom: "fraise",
+    nom: "Fraise",
     prix: 10,
     description: "Fraise des états-unis de première qualité",
   },
