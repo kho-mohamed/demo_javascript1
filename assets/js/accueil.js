@@ -100,6 +100,7 @@ function init() {
 
 // fonction qui génère les liens des photos à mettre dans src des images:
 function genereLienImage(nomProduit) {
+  nomProduit = nomProduit.toLowerCase(); // on met le nom en minuscule pour éviter les erreurs de saisie
   let lien = `assets/img/images-produits/${nomProduit}.jpg`;
   return lien;
 }
@@ -204,7 +205,7 @@ function affichagedetaille(produit) {
   imageProduit.alt = produit.nom;
   titreProduit.textContent = produit.nom;
   descriptionProduit.textContent = produit.description;
-  //on affiche la balise aside contenant les informations des produits: 
+  //on affiche la balise aside contenant les informations des produits:
   detailProduitHTML.classList.remove("invisible");
 }
 
