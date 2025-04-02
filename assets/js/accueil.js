@@ -66,7 +66,7 @@ const filtrePrixdecroi = document.querySelector("#tri-prix-decroissant");
 const detailProduitHTML = document.querySelector(".aside_detail");
 
 // la variable de l'image de la boite d'annonce :
-const lienImage = "/assets/img/info.jpg";
+const lienImage = "assets/img/info.jpg";
 
 // Fonction d'initialisation
 function init() {
